@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #2B6100;
+    --secondary-color: #93BFCF;
+    --background-light: #f4f4f4;
+    --white: #fff;
+    --black: #1d1c1c;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:white;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3%;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    height: 60px;
+}
+
+.header .logo img {
+    height: 20px;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: green;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-left: 50px; 
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; 
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.navbar a:hover {
+    color: var(--black);
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative; 
+    background: url('/asset/image/bg.png') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #2d5f2d;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.hero-text h1 {
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.hero-text p {
+    font-size: 25px;
+}
+
+.wave {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column; /* Mengatur agar teks tersusun ke bawah */
+    align-items: center; /* Pusatkan teks */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.line1 {
+    margin-bottom: 5px; /* Memberi jarak antara baris 1 dan 2 */
+}
+
+.emoji {
+    font-size: 1.2em;
+}
+.poetry-section {
+    margin-top: 30px;
+    padding: 90px 80px;  
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+}
+.poem-title {
+    font-weight: bold;
+    color: #4a7c20;
+    margin-bottom: 10px;
+}
+.poem-content {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.poet {
+    font-size: 0.9em;
+    color: #777;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Susun ke bawah */
+    align-items: center; /* Pusatkan kontennya */
+    gap: 100px; /* Jarak antar kartu */
+    padding: 90px 80px;  
+}
+
+.card {
+    width: 80%;
+    max-width: 500px; /* Batas maksimum lebar kartu */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-size: 20px;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+
+.not-found {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 150px 80px;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.not-found h2 {
+    font-size: 30px;
+    font-weight: bold;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.search-again {
+    font-size: 30px;
+    margin-top: 0.5rem;
+}
+
+.search-button {
+    margin-top: 1rem;
+    padding: 15px 50px;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.search-button:hover {
+    background-color: #c4e9b0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 90px 80px;  
+    background-color: #f8fce7;
+    font-size: 15px;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.footer .left {
+    width: 55%; 
+    text-align: left;
+}
+
+.footer .right {
+    width: 40%;
+    text-align: right; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: -50px;
+    
+}
+
+.footer .social-icons img {
+    object-fit: contain; 
+    transition: transform 0.2s ease-in-out;
+    width: 150px;
+    height: 150px;
+}
+
